@@ -13,9 +13,15 @@ Setting up the environment
   cd icon-evol/code
   git submodule update --init --recursive
   ```
-* recommended: import as a project into IntelliJ (iconevol.iml in code directory)
-* otherwise (e.g. in Eclipse): import as Maven project (pom.xml in code directory),  
-  manually configure relevant folders from submodules as additional source folders
+* import as a Maven project into a Java IDE, e.g. IntelliJ or Eclipse (pom.xml in code directory)
+* configure the following directories as source roots:
+  ```
+  src/main/java
+  iwsa/src
+  iwsa/bin-utils/src/main/java
+  iwsa/cldf-java/src/main/java 
+  ```  
+* build the project
 
 Reproducing the SSt values used in the article
 ---
