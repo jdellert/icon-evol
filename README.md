@@ -5,7 +5,7 @@ This repository contains the code and the supplementary materials for the follow
 
 Computation of sound stability (SSt) scores
 ===
-* This part is implemented in Java, packaged as a Maven project in the `code` directory.
+This part is implemented in Java, packaged as a Maven project in the `code` directory.
 
 Setting up the environment
 ---
