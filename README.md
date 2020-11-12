@@ -1,7 +1,7 @@
 # icon-evol
 Iconicity and Evolution (joint project Tübingen/Lund)
 
-This repository contains the code and the supplementary materials for the following article: Johannes Dellert, Niklas Erben Johansson, Johan Frid, Gerd Carling: "Preferred sound groups of vocal iconicity reflectevolutionary mechanisms of sound stability and first language aquisition" (under review).
+This repository contains the code and the supplementary materials for the following article: **Johannes Dellert, Niklas Erben Johansson, Johan Frid, Gerd Carling: *Preferred sound groups of vocal iconicity reflect evolutionary mechanisms of sound stability and first language acquisition*.** (under review)
 
 Computation of sound stability (SSt) scores
 ===
