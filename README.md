@@ -3,7 +3,7 @@ Iconicity and Evolution (joint project Tübingen/Lund)
 
 Computation of sound stability scores
 ===
-* Java code resides in code directory
+* Java code resides in `code` directory
 
 Setting up the environment
 ---
@@ -25,7 +25,7 @@ Setting up the environment
 
 Reproducing the SSt values used in the article
 ---
-* reproducing our results:
+* (optional) Reinfer the sound similarity model by running the script `de.tuebingen.sfs.iconevol.CorrespondenceModelPreparation`. This will use the NorthEuraLex version and the sound group definitions placed under `src/main/resources`, and stores the sound similarity model under `src/main/resources/northeuralex-0.9/global-iw-lund.corr`. If you do not make any changes to the input data or the sound groups, this step should not be necessary.
 
 Supplementary materials
 ===
