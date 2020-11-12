@@ -1,6 +1,8 @@
 # icon-evol
 Iconicity and Evolution (joint project Tübingen/Lund)
 
+This repository contains the code and the supplementary materials for the following article: Johannes Dellert, Niklas Erben Johansson, Johan Frid, Gerd Carling: "Preferred sound groups of vocal iconicity reflectevolutionary mechanisms of sound stability and first language aquisition" (under review).
+
 Computation of sound stability (SSt) scores
 ===
 * This part is implemented in Java, packaged as a Maven project in the `code` directory.
@@ -25,7 +27,8 @@ Setting up the environment
 
 Reproducing the SSt values used in the article
 ---
-* (optional) Reinfer the sound similarity model by running the script `de.tuebingen.sfs.iconevol.CorrespondenceModelPreparation`. This will use the NorthEuraLex version and the sound group definitions placed under `src/main/resources`, and stores the sound similarity model under `src/main/resources/northeuralex-0.9/global-iw-lund.corr`. If you do not make any changes to the input data or the sound groups, this step should not be necessary.
+* (optional) Reinfer the sound similarity model by running the script `de.tuebingen.sfs.iconevol.CorrespondenceModelPreparation`.  
+This will use the NorthEuraLex version and the sound group definitions placed under `src/main/resources`, and stores the sound similarity model under `src/main/resources/northeuralex-0.9/global-iw-lund.corr`. If you do not make any changes to the input data or the sound groups, this step should not be necessary.
 * Running the script `de.tuebingen.sfs.iconevol.SoundGroupStabilityOutput` will print a table in tab-separated format, containing the four stability scores for each sound group:
   ```
   SoundGroup	WeightedNumAlignments	Stable	ShiftInGroup	ShiftOutOfGroup	LossOrGain
@@ -40,9 +43,9 @@ Reproducing the SSt values used in the article
 
 Supplementary materials
 ===
-* S1: mathematical description of the sound stability score
-* S2: 
-* S3: 
-* S4: 
-* S5: 
-* S6: 
+* [S1](https://github.com/jdellert/icon-evol/blob/master/supplements/S1-iconevol-mathematical-supplement.pdf): mathematical description of the sound stability score
+* [S2](https://github.com/jdellert/icon-evol/blob/master/supplements/S2-sound-group-definitions.tsv): sound group definitions (as used by the code in order to make stability data compatible with the iconicity data set)
+* [S3](https://github.com/jdellert/icon-evol/blob/master/supplements/S3-sound-acquisition-data.tsv): sound acquisition data (separating sound groups by early vs. late acquisition, with references)
+* [S4](https://github.com/jdellert/icon-evol/blob/master/supplements/S4-iconevol-combined-dataset.csv): combined dataset (in CSV format) that serves as input to the R script (integrates both datasets)
+* [S5](https://github.com/jdellert/icon-evol/blob/master/supplements/S5-script-for-analyses.R): commented R script implementing the statistical analyses described in the article
+* [S6](https://github.com/jdellert/icon-evol/blob/master/supplements/S6-result-graphs.zip): ZIP file containing all the result graphs mentioned in the article
