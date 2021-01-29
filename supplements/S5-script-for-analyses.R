@@ -1,7 +1,7 @@
 library(ggplot2)
 library(gridExtra)
 
-# test comment
+# updated 210128 according to reviewers' suggestions
 
 # load the integrated dataset
 
@@ -22,6 +22,7 @@ scatterPlot <- ggplot(ico, aes(x=St_StableShiftInGroup, y=log(Icon_fit-1), color
     geom_smooth(method=lm, se=FALSE, fullrange=TRUE) +
     scale_color_manual(values = c('#999999','#E69F00')) +
     theme(axis.text.y = element_text(angle = 90, hjust = 0.5)) +
+    xlab('Sound_stability') + ylab('Log(iconic_value)') +
     #theme(legend.position=c(0.05,0.97), legend.justification=c(0,1)) # no log
     theme(legend.position=c(0.76,0.285), legend.justification=c(0,1)) # log
 
@@ -30,6 +31,7 @@ xdensity <- ggplot(ico, aes(x=St_StableShiftInGroup, fill=V.C)) +
     geom_density(alpha=.5) + 
     scale_fill_manual(values = c('#999999','#E69F00')) + 
     theme(axis.text.y = element_text(angle = 90, hjust = 0.5)) +
+    ylab('Density') +
     theme(axis.title.x=element_blank(),
           axis.text.x=element_blank(),
           axis.ticks.x=element_blank()) +
@@ -40,6 +42,7 @@ ydensity <- ggplot(ico, aes(x=log(Icon_fit-1), fill=V.C)) +
     geom_density(alpha=.5) + 
     scale_fill_manual(values = c('#999999','#E69F00')) + 
     theme(axis.text.y = element_text(angle = 90, hjust = 0.5)) +
+    ylab('Density') +
     theme(axis.title.y=element_blank(),
           axis.text.y=element_blank(),
           axis.ticks.y=element_blank()) +
@@ -102,7 +105,11 @@ ggplot(ico.p, aes(x=St_StableShiftInGroup, y=log(Icon_fit-1), color=C_PoA, shape
                     aes(alpha = ..level.., fill = C_PoA),
                     bins = 4) +
     theme(legend.position=c(0.015,0.22), legend.justification=c(0,1)) +
-    guides(alpha = F)
+    xlab('Sound_stability') + ylab('Log(iconic_value)') +
+    scale_fill_discrete(name = 'C_Place',
+                    breaks = c('E','L'),
+                    labels = c('Earlier','Later')) +
+    guides(alpha = F, color = F, shape = F)
 dev.off()
 
 # C_MoA plot (comparing Ico vs. SSt for consonants by manner of articulation, 
@@ -118,7 +125,11 @@ ggplot(ico.m, aes(x=St_StableShiftInGroup, y=log(Icon_fit-1), color=C_MoA, shape
                     aes(alpha = ..level.., fill = C_MoA),
                     bins = 4) +
     theme(legend.position=c(0.015,0.22), legend.justification=c(0,1)) +
-    guides(alpha = F)
+    xlab('Sound_stability') + ylab('Log(iconic_value)') +
+    scale_fill_discrete(name = 'C_Manner',
+                    breaks = c('E','L'),
+                    labels = c('Earlier','Later')) +
+    guides(alpha = F, color = F, shape = F)
 dev.off()
 
 # C_Voi plot (comparing Ico vs. SSt for consonants by voicing, supplementary materials only)
@@ -132,8 +143,12 @@ ggplot(ico.vo, aes(x=St_StableShiftInGroup, y=log(Icon_fit-1), color=C_Voice, sh
     stat_density_2d(geom = "polygon",
                     aes(alpha = ..level.., fill = C_Voice),
                     bins = 4) +
-    theme(legend.position=c(0.015,0.2), legend.justification=c(0,1)) +
-    guides(alpha = F)
+    theme(legend.position=c(0.015,0.22), legend.justification=c(0,1)) +
+    xlab('Sound_stability') + ylab('Log(iconic_value)') +
+    scale_fill_discrete(name = 'C_Voice',
+                        breaks = c('E','L'),
+                        labels = c('Earlier','Later')) +
+    guides(alpha = F, color = F, shape = F)
 dev.off()
 
 # V_Height plot (comparing Ico vs. SSt for vowels by height, supplementary materials only)
@@ -147,8 +162,12 @@ ggplot(ico.h, aes(x=St_StableShiftInGroup, y=log(Icon_fit-1), color=V_height, sh
     stat_density_2d(geom = "polygon",
                     aes(alpha = ..level.., fill = V_height),
                     bins = 4) +
-    theme(legend.position=c(0.015,0.2), legend.justification=c(0,1)) +
-    guides(alpha = F)
+    theme(legend.position=c(0.015,0.22), legend.justification=c(0,1)) +
+    xlab('Sound_stability') + ylab('Log(iconic_value)') +
+    scale_fill_discrete(name = 'V_height',
+                        breaks = c('E','L'),
+                        labels = c('Earlier','Later')) +
+    guides(alpha = F, color = F, shape = F)
 dev.off()
 
 # V_Back plot (comparing Ico vs. SSt for vowels by backness, supplementary materials only)
@@ -162,6 +181,10 @@ ggplot(ico.b, aes(x=St_StableShiftInGroup, y=log(Icon_fit-1), color=V_backness, 
     stat_density_2d(geom = "polygon",
                     aes(alpha = ..level.., fill = V_backness),
                     bins = 4) +
-    theme(legend.position=c(0.015,0.2), legend.justification=c(0,1)) +
-    guides(alpha = F)
+    theme(legend.position=c(0.015,0.22), legend.justification=c(0,1)) +
+    xlab('Sound_stability') + ylab('Log(iconic_value)') +
+    scale_fill_discrete(name = 'V_backness',
+                        breaks = c('E','L'),
+                        labels = c('Earlier','Later')) +
+    guides(alpha = F, color = F, shape = F)
 dev.off()
