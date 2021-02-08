@@ -1,7 +1,16 @@
 library(ggplot2)
 library(gridExtra)
 
-# updated 210128 according to reviewers' suggestions
+# This file is part of the supplementary materials to the following article:
+# 
+# Johannes Dellert, Niklas Erben Johansson, Johan Frid, and Gerd Carling (2021):
+# Preferred sound groups of vocal iconicity reflect evolutionary mechanisms of
+# sound stability and first language acquisition: evidence from Eurasia. In: Antonio
+# Benítez-Burraco and Ljiljana Progovac (eds.): Reconstructing prehistoric languages,
+# theme issue of Philosophical Transactions of the Royal Society B.
+# 
+# updated 2021-01-28 according to reviewers' suggestions about captions
+# updated 2021-02-08 by the reference to the article
 
 # load the integrated dataset
 
